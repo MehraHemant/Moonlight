@@ -1,0 +1,85 @@
+.materialsContainer {
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.materialImageHolder {
+  position: relative;
+  height: 500px;
+  animation: fadeIn 1s ease-out;
+}
+
+.materialImageOverlayHeader {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.materialImageOverlayExploreBtn {
+position: absolute;
+bottom: 10%;
+left: 35%;
+color: white;
+font-size: 1rem;
+font-weight: 400;
+z-index: 1;
+animation: heartbeat 2.8s ease infinite;
+}
+
+.materialImageHolder:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.05);
+}
+
+
+.materialImageHolder:hover > img {
+  opacity: 0.7;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  /* .materialsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  } */
+  .materialImageHolder {
+    height: 500px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .materialsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .materialImageHolder {
+    height: 300px;
+  }
+}
+
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
