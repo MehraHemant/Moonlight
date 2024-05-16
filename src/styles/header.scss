@@ -35,7 +35,7 @@
                 transition: 0.3s;
 
                 &:hover {
-                    background: rgba($color: #000000, $alpha: 0.6);
+                    background: rgba($color: black, $alpha: 0.6);
                     color: var(--white);
                 }
             }
@@ -94,12 +94,12 @@
                 left: 0;
                 width: 0;
                 height: 1px;
-                background-color: var(--black);
+                background-color: var(--white);
                 transition: all ease 0.3s;
             }
 
             &.active {
-                color: var(--black);
+                color: var(--white);
             }
 
             &.view-all-btn::before {
